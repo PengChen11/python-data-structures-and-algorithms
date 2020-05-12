@@ -1,4 +1,4 @@
-from python_data_structures_and_algorithms import __version__
+from dsa import __version__
 
 
 def test_version():
