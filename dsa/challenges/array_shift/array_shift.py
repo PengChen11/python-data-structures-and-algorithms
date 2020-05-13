@@ -38,4 +38,24 @@ def removeShiftArray(inputArray):
   return newArray
 
 
+if __name__ == "__main__":
+    from textwrap import dedent
+    print(dedent("""
+    ***************************************
+    ** Please input an array,            **
+    ** seperate by space. no [ ] needed. **
+    ** e.g.   1 2 3 4 5 6                **
+    ***************************************
+    """))
+    inputArray = [int(elem) for elem in input().split()]
 
+    print(dedent("""
+    *******************************************************
+    ** Please input the number to be added to that array **
+    *******************************************************
+    """))
+
+    key = int(input())
+    result = insertShiftArray(inputArray, key)
+
+    print('The modified Array is','\n', *result)
