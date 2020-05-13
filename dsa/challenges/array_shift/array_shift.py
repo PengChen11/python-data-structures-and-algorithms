@@ -38,4 +38,5 @@ def removeShiftArray(inputArray):
   return newArray
 
 
-
+if __name__ == "__main__":
+    pass
