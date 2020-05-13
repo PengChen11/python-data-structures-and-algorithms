@@ -16,6 +16,7 @@ def BinarySearch(inputArray, key):
                     end = mid-1
                 else:
                     start = mid+1
+    # if search comes back with nothing, return -1
     return -1
 
 
@@ -43,4 +44,5 @@ if __name__ == "__main__":
         print('The index for the element matching that key is:', result)
     else:
         print('There is no element matching that key inside the array')
+
 

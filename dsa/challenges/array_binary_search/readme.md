@@ -9,8 +9,9 @@ WWrite a function called BinarySearch which takes in 2 parameters: a sorted arra
 without using any build-in list method, it is:
 1. since we are searching from a sorted array, if the key is greater than the last element inside of the array, don't even do the search. just return -1.
 2. then will always compair the key with element that has the middle index first, if key is smaller than that element, get rid or the greater half of the array, do the search again; vice versa.
+3. if nothing could be found in the end, return -1
 
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![img](array_shift.PNG)
+![img](array_binary_search.PNG)
