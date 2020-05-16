@@ -1,5 +1,8 @@
-# data-structures-and-algorithms for code 401
+# Data structures and algorithms challenges for code 401
+
 Part of growing as a programmer is to practice, practice, practice. Throughout Code Fellows 401 Python course, I will complete a set of daily code challenges.
+
+## Algorithm challenges:
 
 [1. Reverse an Array](dsa/challenges/array_reverse/README.md)
 
@@ -8,3 +11,8 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 [3. Binary search in a sorted 1D array](dsa/challenges/array_binary_search/readme.md)
 
 [4. Given a matrix, find the sum of each row.](dsa/challenges/sum_2D_array/readme.md)
+
+
+## Data structure challenges:
+
+[1. Linked list insertions.](dsa/data_structures/linked_list/readme.md)
