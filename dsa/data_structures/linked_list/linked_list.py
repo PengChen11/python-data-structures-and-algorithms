@@ -105,6 +105,21 @@ class Linked_List:
             raise Exception("Can't find the value")
 
 
+    def reverseSearch(self,value):
+        assert(value >= 0),'entered K need to be greater than 0'
+        result = []
+        current = self.head_val
+        while current is not None:
+            result.append(current.val)
+            current = current.next_val
+
+        if value <= len(result):
+            result.reverse()
+            return result[value]
+        elif value > len(result):
+            raise Exception('The K is greater than the length of linked list')
+
+
     def __str__(self):
         current=self.head_val
         val_list = []
@@ -123,7 +138,7 @@ class Linked_List:
 # if __name__ == "__main__":
 #     test_list = Linked_List()
 #     test_list.insert([1,2,3,4,5,6,7])
-#     test_list.remove(8)
-#     print(test_list.__str__())
+#     tester = test_list.reverseSearch(0)
+#     print(tester)
 
 
