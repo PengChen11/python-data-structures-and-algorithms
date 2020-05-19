@@ -162,6 +162,15 @@ def test_remove_2(insertion_val):
     assert (tester == '{ 1 } -> { 3 } -> NULL'), '.remove() is not working'
 
 
+def test_reverseSearch(reverse_val):
+    test_list = Linked_List()
+    test_list.insert(reverse_val)
+    tester1 = test_list.reverseSearch(0)
+    tester2 = test_list.reverseSearch(2)
+    assert (tester1 == 2),'reversed search method is not working'
+    assert (tester2 == 3),'reversed search method is not working'
+    with pytest.raises(Exception):
+        assert test_list.reverseSearch(6)
 
 
 @pytest.fixture
@@ -193,5 +202,14 @@ def insertion_val_2():
     return [
         1,
         2,
+        2
+    ]
+
+@pytest.fixture
+def reverse_val():
+    return [
+        1,
+        3,
+        8,
         2
     ]
