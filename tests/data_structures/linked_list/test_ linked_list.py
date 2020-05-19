@@ -67,6 +67,84 @@ def test_return_all(init_values):
     assert (tester == '{ Day2: Tue } -> { Day3: Wed } -> { Day4: Thu } -> { Day5: Fri } -> NULL'),'Failed to return all values inside of the linked list'
 
 
+def test_append(insertion_val):
+    test_list = Linked_List()
+    test_list.insert(insertion_val)
+    test_list.append(5)
+    tester = test_list.__str__()
+    assert tester == '{ 1 } -> { 3 } -> { 2 } -> { 5 } -> NULL'
+
+
+def test_append_1():
+    test_list = Linked_List()
+    test_list.append(1)
+    tester = test_list.head_val.val
+    assert (tester == 1),'Error when appending value to an empty linked list.'
+
+
+def test_insertBefore_1(insertion_val):
+    test_list = Linked_List()
+    test_list.insert(insertion_val)
+    test_list.insertBefore(3,5)
+    tester = test_list.__str__()
+    assert (tester == '{ 1 } -> { 5 } -> { 3 } -> { 2 } -> NULL'), 'Insert before error.'
+
+
+def test_insertBefore_2(insertion_val):
+    test_list = Linked_List()
+    test_list.insert(insertion_val)
+    test_list.insertBefore(1,5)
+    tester = test_list.__str__()
+    assert (tester == '{ 5 } -> { 1 } -> { 3 } -> { 2 } -> NULL'), 'Insert before error.'
+
+
+
+def test_insertBefore_3(insertion_val_2):
+    test_list = Linked_List()
+    test_list.insert(insertion_val_2)
+    test_list.insertBefore(2,5)
+    tester = test_list.__str__()
+    assert (tester == '{ 1 } -> { 5 } -> { 2 } -> { 2 } -> NULL'), 'Insert before error.'
+
+
+def test_insertBefore_4(insertion_val):
+    test_list = Linked_List()
+    test_list.insert(insertion_val)
+    with pytest.raises(Exception):
+        assert test_list.insertBefore(4,5)
+
+
+
+def test_insertAfter_1(insertion_val):
+    test_list = Linked_List()
+    test_list.insert(insertion_val)
+    test_list.insertAfter(3,5)
+    tester = test_list.__str__()
+    assert (tester == '{ 1 } -> { 3 } -> { 5 } -> { 2 } -> NULL'), 'insertAfter error.'
+
+
+def test_insertAfter_2(insertion_val):
+    test_list = Linked_List()
+    test_list.insert(insertion_val)
+    test_list.insertAfter(2,5)
+    tester = test_list.__str__()
+    assert (tester == '{ 1 } -> { 3 } -> { 2 } -> { 5 } -> NULL'), 'insertAfter error.'
+
+
+def test_insertAfter_3(insertion_val_2):
+    test_list = Linked_List()
+    test_list.insert(insertion_val_2)
+    test_list.insertAfter(2,5)
+    tester = test_list.__str__()
+    assert (tester == '{ 1 } -> { 2 } -> { 5 } -> { 2 } -> NULL'), 'insertAfter error.'
+
+
+def test_insertAfter_4(insertion_val):
+    test_list = Linked_List()
+    test_list.insert(insertion_val)
+    with pytest.raises(Exception):
+        assert test_list.insertBefore(4,5)
+
 
 
 @pytest.fixture
@@ -85,3 +163,18 @@ def muti_values():
         'Day1: Mon'
     ]
 
+@pytest.fixture
+def insertion_val():
+    return [
+        1,
+        3,
+        2
+    ]
+
+@pytest.fixture
+def insertion_val_2():
+    return [
+        1,
+        2,
+        2
+    ]

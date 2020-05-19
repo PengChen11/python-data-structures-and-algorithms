@@ -39,6 +39,65 @@ class Linked_List:
         return False
 
 
+    def append(self,value):
+        new_node = Node(value)
+        current = self.head_val
+        if current is None:
+            self.head_val = new_node
+        else:
+            a=0
+            while current is not None:
+                if current.next_val is None:
+                    current.next_val = new_node
+                    break
+                current = current.next_val
+
+
+    def insertBefore(self,value,new_val):
+        new_node = Node(new_val)
+        current = self.head_val
+        find = False
+        while current is not None:
+            if current.val == value:
+                self.insert([new_val])
+                find = True
+                break
+            elif current.next_val is not None and current.next_val.val == value:
+                new_node.next_val = current.next_val
+                current.next_val =new_node
+                find = True
+                break
+            current = current.next_val
+        if find is False:
+            raise Exception("Can't find the value")
+
+
+    def insertAfter(self,value,new_val):
+        new_node = Node(new_val)
+        current = self.head_val
+        find = False
+        while current is not None:
+            if current.val == value:
+                new_node.next_val=current.next_val
+                current.next_val=new_node
+                find = True
+                break
+            current = current.next_val
+        if find is False:
+            raise Exception("Can't find the value")
+
+
+    # def remove(self,value):
+    #     current = self.head_val
+    #     if current == value:
+    #         self.head_val = current.next_val
+    #     else:
+    #         while current is not None:
+    #             if current.val == value:
+    #                 current
+    #             current = current.next_val
+
+
     def __str__(self):
         current=self.head_val
         val_list = []
@@ -51,4 +110,13 @@ class Linked_List:
 
         output = ''
         return output.join(val_list)
+
+
+
+# if __name__ == "__main__":
+#     test_list = Linked_List()
+#     test_list.insert([1,2,3,4])
+#     test_list.insertAfter(4,5)
+#     print(test_list.__str__())
+
 
