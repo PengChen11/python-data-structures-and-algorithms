@@ -146,6 +146,23 @@ def test_insertAfter_4(insertion_val):
         assert test_list.insertBefore(4,5)
 
 
+def test_remove_1(insertion_val):
+    test_list = Linked_List()
+    test_list.insert(insertion_val)
+    test_list.remove(1)
+    tester = test_list.__str__()
+    assert (tester == '{ 3 } -> { 2 } -> NULL'), '.remove() is not working'
+
+
+def test_remove_2(insertion_val):
+    test_list = Linked_List()
+    test_list.insert(insertion_val)
+    test_list.remove(2)
+    tester = test_list.__str__()
+    assert (tester == '{ 1 } -> { 3 } -> NULL'), '.remove() is not working'
+
+
+
 
 @pytest.fixture
 def init_values():
