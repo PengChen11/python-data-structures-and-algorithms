@@ -87,15 +87,22 @@ class Linked_List:
             raise Exception("Can't find the value")
 
 
-    # def remove(self,value):
-    #     current = self.head_val
-    #     if current == value:
-    #         self.head_val = current.next_val
-    #     else:
-    #         while current is not None:
-    #             if current.val == value:
-    #                 current
-    #             current = current.next_val
+    def remove(self,value):
+        current = self.head_val
+        find = False
+        if current.val == value:
+            find = True
+            self.head_val = current.next_val
+        else:
+            while current.next_val is not None:
+                if current.next_val.val == value:
+                    find = True
+                    current.next_val = current.next_val.next_val
+                    if current.next_val is None:
+                        break
+                current = current.next_val
+        if find == False:
+            raise Exception("Can't find the value")
 
 
     def __str__(self):
@@ -115,8 +122,8 @@ class Linked_List:
 
 # if __name__ == "__main__":
 #     test_list = Linked_List()
-#     test_list.insert([1,2,3,4])
-#     test_list.insertAfter(4,5)
+#     test_list.insert([1,2,3,4,5,6,7])
+#     test_list.remove(8)
 #     print(test_list.__str__())
 
 

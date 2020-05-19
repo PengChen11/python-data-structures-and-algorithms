@@ -15,4 +15,4 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 
 ## Data structure challenges:
 
-[1. Linked list insertions.](dsa/data_structures/linked_list/readme.md)
+[1. Linked list](dsa/data_structures/linked_list/readme.md)
