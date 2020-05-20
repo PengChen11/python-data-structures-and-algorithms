@@ -171,6 +171,10 @@ def test_reverseSearch(reverse_val):
     assert (tester2 == 3),'reversed search method is not working'
     with pytest.raises(Exception):
         assert test_list.reverseSearch(6)
+    with pytest.raises(Exception):
+        assert test_list.reverseSearch(-1)
+
+
 
 
 @pytest.fixture
