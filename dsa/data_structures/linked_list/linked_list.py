@@ -10,6 +10,7 @@ class Linked_List:
         self.head_val = None
 
     def insert(self,val_list):
+        """insert a single value or list of values to the beginning of the linked list. values need to in a list data type"""
         # my own assert to handle errors
         assert (type(val_list)==list), "The value(s) to be inserted needs be a list"
         assert (val_list != []), "the value(s) to be inserted can't be empty list"
@@ -31,6 +32,7 @@ class Linked_List:
             self.head_val = new_node_head
 
     def includes(self,search_value):
+        """check whether the searched value is in the linked list"""
         current=self.head_val
         while current is not None:
             if current.val == search_value:
@@ -40,6 +42,7 @@ class Linked_List:
 
 
     def append(self,value):
+        """append value to the end of the linked list"""
         new_node = Node(value)
         current = self.head_val
         if current is None:
@@ -54,6 +57,7 @@ class Linked_List:
 
 
     def insertBefore(self,value,new_val):
+        """insert new value before the value of the linked list"""
         new_node = Node(new_val)
         current = self.head_val
         find = False
@@ -73,6 +77,7 @@ class Linked_List:
 
 
     def insertAfter(self,value,new_val):
+        """insert new value after current value in the linked list"""
         new_node = Node(new_val)
         current = self.head_val
         find = False
@@ -88,6 +93,7 @@ class Linked_List:
 
 
     def remove(self,value):
+        """remove the value from the linked list"""
         current = self.head_val
         find = False
         if current.val == value:
@@ -106,6 +112,7 @@ class Linked_List:
 
 
     def reverseSearch(self,value):
+        """Search the kth value from the end of the linked list"""
         assert(value >= 0),'entered K need to be greater than 0'
         result = []
         current = self.head_val
@@ -119,8 +126,24 @@ class Linked_List:
         elif value > len(result):
             raise Exception('The K is greater than the length of linked list')
 
+    # not working, making big O even worse
+    # def reverseSearch_v2(self,value):
+    #     assert(value >= 0),'entered K need to be greater than 0'
+    #     scout = self.head_val
+    #     anker = self.head_val
+    #     kth_val = self.head_val
+    #     while scout.next is not None:
+    #         for i in range(value):
+    #             scout = anker.next_val
+    #             if scout is None:
+    #                 raise Exception('The index K is greater than the length of the linked list')
+    #             anker = scout
+    #         kth_val = kth_val.next
+    #     return kth_val
+
 
     def __str__(self):
+        """convert the linked list to a string format"""
         current=self.head_val
         val_list = []
         # convert all the linked list values into required format and append to an list for output.
