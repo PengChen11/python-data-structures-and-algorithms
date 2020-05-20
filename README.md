@@ -16,3 +16,5 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 ## Data structure challenges:
 
 [1. Linked list](dsa/data_structures/linked_list/readme.md)
+
+[2. Merge two linked lists](dsa/data_structures/ll_merge/readme.md)
