@@ -18,3 +18,6 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 [1. Linked list](dsa/data_structures/linked_list/readme.md)
 
 [2. Merge two linked lists](dsa/data_structures/ll_merge/readme.md)
+
+[3. Stacks and Queues](dsa/data_structures/stacks_and_queues/readme.md)
+
