@@ -2,6 +2,7 @@ from dsa.data_structures.linked_list.linked_list import *
 
 def mergeLists(LL_1,LL_2):
     """function to take two linked list, return a zipped linked"""
+
     LL_1_current = LL_1.head_val
     LL_2_current = LL_2.head_val
     middle_man_1 = LL_1_current.next_val
