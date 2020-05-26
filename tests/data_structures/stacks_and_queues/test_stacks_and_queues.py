@@ -62,7 +62,7 @@ def test_stack_exception():
 def test_queue_enqueue_one():
     test_queue = Queue()
     test_queue.enqueue('tester_1')
-    tester = test_queue.front.val
+    tester = test_queue._front.val
     assert (tester == 'tester_1'),'Something goes wrong when enqueuing'
 
 
@@ -71,7 +71,7 @@ def test_queue_enqueue_multiple():
     test_queue.enqueue('tester_1')
     test_queue.enqueue('tester_2')
     test_queue.enqueue('tester_3')
-    tester = test_queue.front.next.next.val
+    tester = test_queue._front.next.next.val
     assert (tester == 'tester_3'),'Something goes wrong when enqueuing multiple values'
 
 
@@ -101,13 +101,13 @@ def test_queue_dequeue_multiple():
     test_queue.dequeue()
     test_queue.dequeue()
     test_queue.dequeue()
-    tester = test_queue.front
+    tester = test_queue._front
     assert (tester is None),'Something goes wrong when dequeuing every value'
 
 
 def test_queue_init():
     test_queue = Queue()
-    tester = test_queue.front
+    tester = test_queue._front
     assert(tester is None), "something goes wrong when init queue"
 
 
