@@ -27,6 +27,6 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 |[5]->[10]->[15]|	15|	[5]->[10]|
 
 # Solution
-
+![image](queue_stack.png)
 
 
