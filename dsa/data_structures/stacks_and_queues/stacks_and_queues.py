@@ -2,7 +2,7 @@
 # import sys
 # sys.path.append("~/Library/Mobile\ Documents/com~apple~CloudDocs/SCHOOL/Code_Fellows/401/python/python-data-structures-and-algorithms/dsa/data_structures/linked_list/")
 
-# from linked_list import *
+# from dsa.data_structures.linked_list.linked_list import *
 
 
 
