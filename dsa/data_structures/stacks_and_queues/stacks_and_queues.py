@@ -2,7 +2,7 @@
 # import sys
 # sys.path.append("~/Library/Mobile\ Documents/com~apple~CloudDocs/SCHOOL/Code_Fellows/401/python/python-data-structures-and-algorithms/dsa/data_structures/linked_list/")
 
-# from linked_list import *
+# from dsa.data_structures.linked_list.linked_list import *
 
 
 
@@ -46,23 +46,23 @@ class Stack:
 
 class Queue:
     def __init__(self,front=None):
-        self.front = front
-        self.rear = self.front
+        self._front = front
+        self._rear = self._front
 
 
     def enqueue(self,value):
         new_node = Node(value)
-        if self.rear is None:
-            self.front = self.rear = new_node
+        if self._rear is None:
+            self._front = self._rear = new_node
         else:
-            self.rear.next = new_node
-            self.rear = new_node
+            self._rear.next = new_node
+            self._rear = new_node
 
 
     def dequeue(self):
         try:
-            dequeue_node = self.front
-            self.front = self.front.next
+            dequeue_node = self._front
+            self._front = self._front.next
             dequeue_node.next = None
         except:
             print('The Queue is empty now')
@@ -71,11 +71,13 @@ class Queue:
 
     def peek(self):
         try:
-            return self.front.val
+            return self._front.val
         except:
             print('The Queue is empty now')
 
 
     def inEmpty(self):
-        return self.front == None
+        return self._front == None
 
+if __name__ == "__main__":
+    pass
