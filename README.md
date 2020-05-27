@@ -12,6 +12,8 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 
 [4. Given a matrix, find the sum of each row.](dsa/challenges/sum_2D_array/readme.md)
 
+[5. Implement a Queue using two Stacks.](dsa/challenges/queue_with_stacks/README.md)
+
 
 ## Data structure challenges:
 
