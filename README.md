@@ -14,6 +14,7 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 
 [5. Implement a Queue using two Stacks.](dsa/challenges/queue_with_stacks/README.md)
 
+[6. First-in, First out Animal Shelter.](dsa/challenges/fifo_animal_shelter/README.md)
 
 ## Data structure challenges:
 

@@ -65,16 +65,4 @@ class AnimalShelter:
                 current = current.next
             return output + "are in the shelter now"
 
-if __name__ == "__main__":
-    array = []
-    test = AnimalShelter()
-    test.enqueue("cat","Kitty")
-    test.enqueue("dog","Bobby")
-    test.enqueue("cat","Isaa")
-    test.enqueue("dog","T-bag")
-    a=test.dequeue("cat")
-    array.append(str(a))
-    b=test.dequeue("cat")
-    array.append(str(b))
 
-    print(array)
