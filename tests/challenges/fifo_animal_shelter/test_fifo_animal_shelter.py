@@ -31,3 +31,25 @@ def test_dequeue_cat():
     assert dequeue_animal == ['I am a cat, my name is Kitty', 'I am a cat, my name is Isaa']
 
 
+def test_dequeue_dog():
+    dequeue_animal = []
+    test = AnimalShelter()
+    test.enqueue("cat","Kitty")
+    test.enqueue("dog","Bobby")
+    test.enqueue("cat","Isaa")
+    test.enqueue("dog","T-bag")
+    a=test.dequeue("dog")
+    dequeue_animal.append(str(a))
+    b=test.dequeue("dog")
+    dequeue_animal.append(str(b))
+    assert dequeue_animal == ['I am a dog, my name is Bobby', 'I am a dog, my name is T-bag']
+
+
+def test_dequeue_error():
+    test = AnimalShelter()
+    test.enqueue("cat","Kitty")
+    test.enqueue("dog","Bobby")
+    test.enqueue("cat","Isaa")
+    test.enqueue("dog","T-bag")
+    tester=test.dequeue()
+    assert tester == "Null"
