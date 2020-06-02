@@ -61,3 +61,20 @@ def test_contains():
     test.add(155)
     assert test.contains(200) == True and test.contains(201)==False
 
+
+def test_breadth_first():
+    test = BinaryTree()
+    test.add(2)
+    test.add(7)
+    test.add(5)
+    test.add(2)
+    test.add(6)
+    test.root.right.right=Node(9)
+    test.root.left.right.left = Node(5)
+    test.root.left.right.right = Node(11)
+    test.root.right.right.left=Node(4)
+
+    assert test.preOrder() == [2,7,2,6,5,11,5,9,4]
+    assert test.inOrder() == [2,7,5,6,11,2,5,4,9]
+    assert test.breadth_first() == [2,7,5,2,6,9,5,11,4]
+
