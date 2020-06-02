@@ -1,3 +1,20 @@
+from collections import deque
+
+class Queue():
+    def __init__(self):
+        self.storage = deque()
+
+    def enqueue(self, value):
+        self.storage.appendleft(value)
+
+    def dequeue(self):
+        return self.storage.pop()
+
+    def peek(self):
+        return self.storage[-1]
+
+    def is_empty(self):
+        return len(self.storage) == 0
 
 class Node:
     def __init__(self,value,left=None,right=None):
@@ -72,6 +89,49 @@ class BinaryTree:
         traverse(self.root)
         return output
 
+    def breadth_first(self):
+        """method to do the breadth first search method"""
+        output = []
+        storage = Queue()
+
+        storage.enqueue(self.root)
+
+        while not storage.is_empty():
+            front = storage.dequeue()
+            output.append(front.value)
+
+            if front.left:
+                storage.enqueue(front.left)
+
+            if front.right:
+                storage.enqueue(front.right)
+
+        return output
+
+    def add(self,value):
+        """method to add value to the tree using breadth first search method"""
+        node = Node(value)
+        storage = Queue()
+        if not self.root:
+            self.root = node
+        else:
+            storage.enqueue(self.root)
+            while not storage.is_empty():
+                front = storage.dequeue()
+
+                if front.left:
+                    storage.enqueue(front.left)
+                else:
+                    front.left = node
+                    return
+
+                if front.right:
+                    storage.enqueue(front.right)
+                else:
+                    front.right = node
+                    return
+
+
 
 class BinarySearchTree(BinaryTree):
 
@@ -108,11 +168,11 @@ class BinarySearchTree(BinaryTree):
 
 
 if __name__ == "__main__":
-    test = BinarySearchTree()
+    test = BinaryTree()
     test.add(100)
     test.add(50)
     test.add(200)
     test.add(25)
     test.add(75)
     test.add(155)
-    print(test.postOrder())
+    print(test.breadth_first())
