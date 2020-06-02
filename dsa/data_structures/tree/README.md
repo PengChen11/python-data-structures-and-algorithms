@@ -32,7 +32,12 @@ Write tests to prove the following functionality:
 - In-order: ```25, 50, 75, 100, 155, 200```
 - Post-order: ```25, 75, 50, 155, 200, 100```
 
+![img](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-17/binary-tree.png)
+
+- Breadth first: ```[2,7,5,2,6,9,5,11,4]```
+
+![img](tree.png)
 
 ## Big O
-for O time, all three method equals to the number of nodes.
+for O time, all four method equals to the number of nodes.
 
