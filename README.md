@@ -18,6 +18,8 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 
 [7. Multi-bracket Validation.](dsa/challenges/multi_bracket_validation/README.md)
 
+[8. Conduct “FizzBuzz” on a tree](dsa/challenges/fizz_buzz_tree/README.md)
+
 ## Data structure challenges:
 
 [1. Linked list](dsa/data_structures/linked_list/readme.md)
