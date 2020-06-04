@@ -131,6 +131,26 @@ class BinaryTree:
                     front.right = node
                     return
 
+    def find_max(self):
+        """function to find the max numeric value in the tree"""
+        if not self.root:
+            raise Exception("can't find max value in an empty tree")
+
+        max_value = self.root.value
+        storage = Queue()
+        storage.enqueue(self.root)
+
+        while not storage.is_empty():
+            front = storage.dequeue()
+            if front.value > max_value:
+                max_value = front.value
+
+            if front.left:
+                storage.enqueue(front.left)
+
+            if front.right:
+                storage.enqueue(front.right)
+        return max_value
 
 
 class BinarySearchTree(BinaryTree):
@@ -175,4 +195,4 @@ if __name__ == "__main__":
     test.add(25)
     test.add(75)
     test.add(155)
-    print(test.breadth_first())
+    print(test.find_max())
