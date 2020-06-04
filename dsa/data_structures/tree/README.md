@@ -1,6 +1,7 @@
 # Implementation: Trees
 
 [click here to see the code](tree.py)
+
 [click here to see the tester code](../../../tests/challenges/../data_structures/tree/test_tree.py)
 
 ## Features
@@ -8,6 +9,8 @@
 - Create a BinaryTree class
     - Define a method for each of the depth first traversals called **preOrder**, **inOrder**, and **postOrder** which returns an array of the values, ordered appropriately.
 - Any exceptions or errors that come from your code should be semantic, capturable errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
+- Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+- Write an instance method called ```find-maximum-value```. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
 
 - Create a BinarySearchTree class
     - Define a method named **add** that accepts a value, and adds a new node with that value in the correct location in the binary search tree.
@@ -24,6 +27,8 @@ Write tests to prove the following functionality:
 4. Can successfully return a collection from a preorder traversal
 5. Can successfully return a collection from an inorder traversal
 6. Can successfully return a collection from a postorder traversal
+7. Can successfully return a collection from a breadth first traversal
+8. Can successfully return the max value
 
 ## solution:
 ![img](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-15/resources/images/BinaryTree1.PNG)
@@ -35,8 +40,10 @@ Write tests to prove the following functionality:
 ![img](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-17/binary-tree.png)
 
 - Breadth first: ```[2,7,5,2,6,9,5,11,4]```
-
 ![img](tree.png)
+
+- max value:
+![img](max.png)
 
 ## Big O
 for O time, all four method equals to the number of nodes.

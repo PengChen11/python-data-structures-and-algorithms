@@ -78,3 +78,13 @@ def test_breadth_first():
     assert test.inOrder() == [2,7,5,6,11,2,5,4,9]
     assert test.breadth_first() == [2,7,5,2,6,9,5,11,4]
 
+
+def test_find_max():
+    test = BinaryTree()
+    test.add(100)
+    test.add(50)
+    test.add(200)
+    test.add(25)
+    test.add(75)
+    test.add(155)
+    assert test.find_max() == 200
