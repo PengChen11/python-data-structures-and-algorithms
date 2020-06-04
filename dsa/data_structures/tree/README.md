@@ -1,6 +1,7 @@
 # Implementation: Trees
 
 [click here to see the code](tree.py)
+
 [click here to see the tester code](../../../tests/challenges/../data_structures/tree/test_tree.py)
 
 ## Features
