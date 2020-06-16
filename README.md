@@ -20,6 +20,8 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 
 [8. Conduct “FizzBuzz” on a tree](dsa/challenges/fizz_buzz_tree/README.md)
 
+[9. Insertion sort](dsa/challenges/insertion_sort/README.md)
+
 ## Data structure challenges:
 
 [1. Linked list](dsa/data_structures/linked_list/readme.md)
