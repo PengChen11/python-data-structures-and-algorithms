@@ -27,6 +27,13 @@ class BinaryTree:
     def __init__(self):
         self.root = None
 
+    @property
+    def new_max(self):
+        if not self.root:
+            return None
+        else:
+            return max(self.preOrder())
+
     def preOrder(self):
         """pre-order method"""
         output = []
@@ -195,4 +202,4 @@ if __name__ == "__main__":
     test.add(25)
     test.add(75)
     test.add(155)
-    print(test.find_max())
+    print(test.new_max)
