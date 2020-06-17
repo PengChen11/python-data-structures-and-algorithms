@@ -1,9 +1,10 @@
 # Insertion Sort
+
 Insertion sort is a sorting algorithm that:
+
 1. Work from left to right
 2. Examine each item and compare it to items on its left
 3. Insert the item in the correct position in the array
-
 
 ## Pseudocode
 
