@@ -22,6 +22,8 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 
 [9. Insertion sort](dsa/challenges/insertion_sort/README.md)
 
+[10. Merge sort](dsa/challenges/merge_sort/README.md)
+
 ## Data structure challenges:
 
 [1. Linked list](dsa/data_structures/linked_list/readme.md)
