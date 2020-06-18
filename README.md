@@ -2,7 +2,7 @@
 
 Part of growing as a programmer is to practice, practice, practice. Throughout Code Fellows 401 Python course, I will complete a set of daily code challenges.
 
-## Algorithm challenges:
+## Algorithm challenges
 
 [1. Reverse an Array](dsa/challenges/array_reverse/README.md)
 
@@ -24,7 +24,9 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 
 [10. Merge sort](dsa/challenges/merge_sort/README.md)
 
-## Data structure challenges:
+[11. Quick sort](dsa/challenges/quick_sort/README.md)
+
+## Data structure challenges
 
 [1. Linked list](dsa/data_structures/linked_list/readme.md)
 
