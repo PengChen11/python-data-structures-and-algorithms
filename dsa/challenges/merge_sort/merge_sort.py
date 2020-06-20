@@ -1,3 +1,5 @@
+import pysnooper
+
 def merge_sort(arr):
     n = len(arr)
     if n > 1:
