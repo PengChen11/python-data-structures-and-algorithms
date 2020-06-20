@@ -35,3 +35,5 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 [3. Stacks and Queues](dsa/data_structures/stacks_and_queues/readme.md)
 
 [4. Tree](dsa/data_structures/tree/README.md)
+
+[5. Hash table](dsa/data_structures/hash_table/README.md)
