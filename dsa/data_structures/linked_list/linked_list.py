@@ -6,8 +6,10 @@ class Node:
         self.next_val = None
 
 class Linked_List:
+
     def __init__(self):
         self.head_val = None
+
 
     def insert(self,val_list):
         """insert a single value or list of values to the beginning of the linked list. values need to in a list data type"""
@@ -30,6 +32,7 @@ class Linked_List:
 
             new_node_after.next_val=self.head_val
             self.head_val = new_node_head
+
 
     def includes(self,search_value):
         """check whether the searched value is in the linked list"""
@@ -126,27 +129,11 @@ class Linked_List:
         elif value > len(result):
             raise Exception('The K is greater than the length of linked list')
 
-    # not working, making big O even worse
-    # def reverseSearch_v2(self,value):
-    #     assert(value >= 0),'entered K need to be greater than 0'
-    #     scout = self.head_val
-    #     anker = self.head_val
-    #     kth_val = self.head_val
-    #     while scout.next is not None:
-    #         for i in range(value):
-    #             scout = anker.next_val
-    #             if scout is None:
-    #                 raise Exception('The index K is greater than the length of the linked list')
-    #             anker = scout
-    #         kth_val = kth_val.next
-    #     return kth_val
-
 
     def __str__(self):
         """convert the linked list to a string format"""
         current=self.head_val
         val_list = []
-        # convert all the linked list values into required format and append to an list for output.
         while current is not None:
             val_list.append('{ '+ str(current.val) +' } -> ')
             current=current.next_val

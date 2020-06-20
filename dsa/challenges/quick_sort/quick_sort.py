@@ -1,4 +1,5 @@
-
+import pysnooper
+# @pysnooper.snoop()
 def quick_sort(arr, left=0, right=None):
     '''function to do the array quick sort'''
     if right is None:
@@ -7,7 +8,7 @@ def quick_sort(arr, left=0, right=None):
         position = partition(arr,left,right)
         quick_sort(arr, left, position-1 )
         quick_sort(arr, position+1, right)
-
+@pysnooper.snoop()
 def partition(arr, left, right):
     '''function to seperate the array into two piece by the value of the last element, and return the position in modified array'''
     pivot = arr[right]
@@ -23,6 +24,6 @@ def partition(arr, left, right):
 
 
 if __name__ == "__main__":
-    test = [8,23,23,42,16,15]
+    test = [8,7,6,5,4,3,2,1]
     quick_sort(test)
     print(test)
