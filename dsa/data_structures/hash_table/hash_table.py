@@ -1,6 +1,3 @@
-import sys
-sys.path.append("/Users/pengchen/Library/Mobile Documents/com~apple~CloudDocs/SCHOOL/Code_Fellows/401/python/python-data-structures-and-algorithms")
-
 from dsa.data_structures.linked_list.linked_list import *
 
 class HashTable:
