@@ -1,4 +1,4 @@
-from dsa.data_structures.linked_list.linked_list import *
+from dsa.data_structures.linked_list.linked_list import Linked_List
 
 class HashTable:
     def __init__(self,size):
@@ -13,8 +13,8 @@ class HashTable:
         if value:
             current = LL.head_val
             while current is not None:
-                if current.val[0] == key:
-                    current.val[1] = value
+                if current.value[0] == key:
+                    current.value[1] = value
                     return
                 current = current.next_val
             LL.append([key, value])
@@ -25,8 +25,8 @@ class HashTable:
             else:
                 current = LL.head_val
                 while current is not None:
-                    if current.val[0] == key:
-                        return current.val[1]
+                    if current.value[0] == key:
+                        return current.value[1]
                     current = current.next_val
                 return None
 
@@ -36,29 +36,29 @@ class HashTable:
         if key already exsist, update the value;
         if multipul keys using the same hashed_key,  handle collisions
         '''
-        hashed_key = self.hash(key)
+        hashed_key = self.hash(str(key))
 
         if not self.table[hashed_key]:
             self.table[hashed_key] = Linked_List()
 
-        self._value(self.table[hashed_key], key, value)
+        self._value(self.table[hashed_key], str(key), value)
 
 
 
     def get(self, key):
         '''This method gets the value for the key.'''
-        hashed_key = self.hash(key)
+        hashed_key = self.hash(str(key))
         if self.table[hashed_key]:
-            return self._value(self.table[hashed_key], key)
+            return self._value(self.table[hashed_key], str(key))
         return None
 
     def contains(self,key):
         '''this method checks whether a key is contained in the hash table'''
-        hashed_key = self.hash(key)
+        hashed_key = self.hash(str(key))
         if not self.table[hashed_key]:
             return False
         else:
-            key_check = self._value(self.table[hashed_key], key)
+            key_check = self._value(self.table[hashed_key], str(key))
             if key_check:
                 return True
             return False
