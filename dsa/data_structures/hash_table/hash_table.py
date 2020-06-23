@@ -63,6 +63,8 @@ class HashTable:
                 return True
             return False
 
+
+
     def hash(self, key):
         '''this method hashes the key'''
         total = 0

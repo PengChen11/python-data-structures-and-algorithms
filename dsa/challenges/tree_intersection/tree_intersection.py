@@ -1,6 +1,5 @@
 from dsa.data_structures.tree.tree import BinaryTree, Node as TreeNode
 from dsa.data_structures.hash_table.hash_table import HashTable
-import pysnooper
 
 
 def tree_intersection(tree1, tree2):
@@ -36,5 +35,4 @@ def tree_intersection(tree1, tree2):
 
 
 if __name__ == "__main__":
-
     pass

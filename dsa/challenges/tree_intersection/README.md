@@ -2,6 +2,10 @@
 
 Find common values in 2 binary trees.
 
+[Click here to see the code](tree_intersection.py)
+
+[Click here to see the tester](../../../tests/challenges/tree_intersection/test_tree_intersection.py)
+
 ## Feature Tasks
 
 - Write a function called ```tree_intersection``` that takes two binary tree parameters.
@@ -25,4 +29,16 @@ Input:
 
 OUPUT : [100,160,125,175,200,350,500]
 
+## Approach & Efficiency
 
+1. take tree 1, traverse inside of it using pre-order method, put every value as a key with value 1 in a hash table.
+
+2. take tree 2, traverse inside of it, compair every value with the keys inside previous hash table. if a match is found, then put it to the output array.
+
+3. return the ouput array when the function is call with two binary trees as args.
+
+Big O is O(2n), it takes n times to build up the hash table, then take another n time to find all the match.
+
+## solution
+
+![img1](1.png)
