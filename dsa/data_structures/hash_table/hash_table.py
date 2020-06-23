@@ -20,12 +20,15 @@ class HashTable:
             LL.append([key, value])
 
         else:
-            current = LL.head_val
-            while current is not None:
-                if current.val[0] == key:
-                    return current.val[1]
-                current = current.next_val
-            return None
+            if not LL:
+                return None
+            else:
+                current = LL.head_val
+                while current is not None:
+                    if current.val[0] == key:
+                        return current.val[1]
+                    current = current.next_val
+                return None
 
     def add(self, key, value):
         '''
@@ -52,10 +55,13 @@ class HashTable:
     def contains(self,key):
         '''this method checks whether a key is contained in the hash table'''
         hashed_key = self.hash(key)
-        key_check = self._value(self.table[hashed_key],  key)
-        if self.table[hashed_key] and key_check:
-            return True
-        return False
+        if not self.table[hashed_key]:
+            return False
+        else:
+            key_check = self._value(self.table[hashed_key], key)
+            if key_check:
+                return True
+            return False
 
     def hash(self, key):
         '''this method hashes the key'''
