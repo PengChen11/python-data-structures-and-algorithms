@@ -28,6 +28,8 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 
 [12. Repeated Word](dsa/challenges/repeated_word/README.md)
 
+[13. Tree intersection](dsa/challenges/tree_intersection/README.md)
+
 ## Data structure challenges
 
 [1. Linked list](dsa/data_structures/linked_list/readme.md)

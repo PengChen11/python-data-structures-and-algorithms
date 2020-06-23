@@ -2,7 +2,7 @@ from textwrap import dedent
 
 class Node:
     def __init__(self, val=None):
-        self.val = val
+        self.value = val
         self.next_val = None
 
 class Linked_List:
@@ -38,7 +38,7 @@ class Linked_List:
         """check whether the searched value is in the linked list"""
         current=self.head_val
         while current is not None:
-            if current.val == search_value:
+            if current.value == search_value:
                 return True
             current = current.next_val
         return False
@@ -65,11 +65,11 @@ class Linked_List:
         current = self.head_val
         find = False
         while current is not None:
-            if current.val == value:
+            if current.value == value:
                 self.insert([new_val])
                 find = True
                 break
-            elif current.next_val is not None and current.next_val.val == value:
+            elif current.next_val is not None and current.next_val.value == value:
                 new_node.next_val = current.next_val
                 current.next_val =new_node
                 find = True
@@ -85,7 +85,7 @@ class Linked_List:
         current = self.head_val
         find = False
         while current is not None:
-            if current.val == value:
+            if current.value == value:
                 new_node.next_val=current.next_val
                 current.next_val=new_node
                 find = True
@@ -99,12 +99,12 @@ class Linked_List:
         """remove the value from the linked list"""
         current = self.head_val
         find = False
-        if current.val == value:
+        if current.value == value:
             find = True
             self.head_val = current.next_val
         else:
             while current.next_val is not None:
-                if current.next_val.val == value:
+                if current.next_val.value == value:
                     find = True
                     current.next_val = current.next_val.next_val
                     if current.next_val is None:
@@ -120,7 +120,7 @@ class Linked_List:
         result = []
         current = self.head_val
         while current is not None:
-            result.append(current.val)
+            result.append(current.value)
             current = current.next_val
 
         if value <= len(result):
@@ -135,7 +135,7 @@ class Linked_List:
         current=self.head_val
         val_list = []
         while current is not None:
-            val_list.append('{ '+ str(current.val) +' } -> ')
+            val_list.append('{ '+ str(current.value) +' } -> ')
             current=current.next_val
         #in the end of the output list, add NULL.
         val_list.append('NULL')

@@ -25,7 +25,7 @@ def test_insert_array():
 def test_head(init_values):
     test_list = Linked_List()
     test_list.insert(init_values)
-    tester = test_list.head_val.val
+    tester = test_list.head_val.value
     assert (tester == 'Day2: Tue'),'HEAD test failed'
 
 
@@ -78,7 +78,7 @@ def test_append(insertion_val):
 def test_append_1():
     test_list = Linked_List()
     test_list.append(1)
-    tester = test_list.head_val.val
+    tester = test_list.head_val.value
     assert (tester == 1),'Error when appending value to an empty linked list.'
 
 
