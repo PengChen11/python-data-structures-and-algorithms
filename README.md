@@ -30,6 +30,8 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 
 [13. Tree intersection](dsa/challenges/tree_intersection/README.md)
 
+[14. Left Join two hash tables](dsa/challenges/left_join/README.md)
+
 ## Data structure challenges
 
 [1. Linked list](dsa/data_structures/linked_list/readme.md)
