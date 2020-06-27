@@ -43,3 +43,5 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 [4. Tree](dsa/data_structures/tree/README.md)
 
 [5. Hash table](dsa/data_structures/hash_table/README.md)
+
+[6. Graph](dsa/data_structures/graph/readme.md)
