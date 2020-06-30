@@ -35,7 +35,7 @@ class Graph:
 
 
     def get_vertices(self):
-        return self._adjacency_list.keys()
+        return list(self._adjacency_list.keys())
 
     def get_neighbors(self, vertex):
         return self._adjacency_list.get(vertex, None)
@@ -46,12 +46,4 @@ class Graph:
 
 if __name__ == "__main__":
 
-    test = Graph()
-    v1 = test.add_vertex(1)
-    v2 = test.add_vertex(2)
-    v3 = test.add_vertex(3)
-    test.add_edge(v1,v2)
-
-    print(test.get_vertices())
-
-    print(len(test.get_neighbors(v2)))
+    pass

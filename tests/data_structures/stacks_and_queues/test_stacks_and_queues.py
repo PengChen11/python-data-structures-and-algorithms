@@ -5,7 +5,7 @@ import pytest
 def test_stack_push_one():
     test_stack = Stack()
     test_stack.push('tester_1')
-    tester = test_stack.top.val
+    tester = test_stack.top.value
     assert (tester == 'tester_1'),"push to stack failed"
 
 
@@ -14,7 +14,7 @@ def test_stack_push_multiple():
     test_stack.push('tester_1')
     test_stack.push('tester_2')
     test_stack.push('tester_3')
-    tester = test_stack.top.val
+    tester = test_stack.top.value
     assert (tester == 'tester_3'),"push multiple values to stack failed"
 
 
@@ -62,7 +62,7 @@ def test_stack_exception():
 def test_queue_enqueue_one():
     test_queue = Queue()
     test_queue.enqueue('tester_1')
-    tester = test_queue._front.val
+    tester = test_queue._front.value
     assert (tester == 'tester_1'),'Something goes wrong when enqueuing'
 
 
@@ -71,7 +71,7 @@ def test_queue_enqueue_multiple():
     test_queue.enqueue('tester_1')
     test_queue.enqueue('tester_2')
     test_queue.enqueue('tester_3')
-    tester = test_queue._front.next.next.val
+    tester = test_queue._front.next.next.value
     assert (tester == 'tester_3'),'Something goes wrong when enqueuing multiple values'
 
 
