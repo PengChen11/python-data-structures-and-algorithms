@@ -8,8 +8,8 @@
 
 class Node:
     """create new node"""
-    def __init__(self, val=None):
-        self.val = val
+    def __init__(self, value=None):
+        self.value = value
         self.next = None
 
 
@@ -31,12 +31,12 @@ class Stack:
             pop_node.next = None
         except:
             print('The Stack is empty now')
-        return pop_node.val
+        return pop_node.value
 
 
     def peek(self):
         try:
-            return self.top.val
+            return self.top.value
         except:
             print('The Stack is empty now')
 
@@ -52,7 +52,7 @@ class Queue:
 
     def enqueue(self,value):
         new_node = Node(value)
-        if self._rear is None:
+        if self._front is None:
             self._front = self._rear = new_node
         else:
             self._rear.next = new_node
@@ -63,20 +63,20 @@ class Queue:
         try:
             dequeue_node = self._front
             self._front = self._front.next
-            dequeue_node.next = None
+            # dequeue_node.next = None
         except:
-            print('The Queue is empty now')
-        return dequeue_node.val
+            return None
+        return dequeue_node.value
 
 
     def peek(self):
         try:
-            return self._front.val
+            return self._front.value
         except:
-            print('The Queue is empty now')
+            return None
 
 
-    def inEmpty(self):
+    def isEmpty(self):
         return self._front == None
 
 if __name__ == "__main__":
