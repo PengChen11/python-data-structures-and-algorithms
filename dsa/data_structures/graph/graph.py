@@ -27,11 +27,17 @@ class Graph:
         if end not in self._adjacency_list:
             raise KeyError('End Vertex not in graph')
 
-        edge = Edge(end, weight)
+        edge_start = Edge(end, weight)
 
         adjacencies = self._adjacency_list[start]
 
-        adjacencies.append(edge)
+        adjacencies.append(edge_start)
+
+        edge_end = Edge(start, weight)
+
+        adjacencies = self._adjacency_list[end]
+
+        adjacencies.append(edge_end)
 
 
     def get_vertices(self):
@@ -42,6 +48,15 @@ class Graph:
 
     def size(self):
         return len(self._adjacency_list)
+
+
+    def get_vertex(self, string_val):
+        lists = self.get_vertices()
+        for i in range(len(lists)):
+            if lists[i].value == string_val:
+                return lists[i]
+        return None
+
 
 
 if __name__ == "__main__":
