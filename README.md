@@ -36,6 +36,8 @@ Part of growing as a programmer is to practice, practice, practice. Throughout C
 
 [16. get edges](dsa/challenges/get_edge/readme.md)
 
+[17. Depth-first traversal on a graph](dsa/challenges/depth_first/readme.md)
+
 ## Data structure challenges
 
 [1. Linked list](dsa/data_structures/linked_list/readme.md)
