@@ -38,7 +38,7 @@ class Stack:
         try:
             return self.top.value
         except:
-            print('The Stack is empty now')
+            return None
 
     def isEmpty(self):
         return self.top == None
